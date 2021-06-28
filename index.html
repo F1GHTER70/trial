@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metamorphosis of a Butterfly</title>
+    <title>TRIAL</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
 
@@ -13,17 +13,13 @@
             margin: 0;
             padding: 0;
             text-decoration: none;
-
         }
-
-        body {
-            /* background-color: #7f8c4c; */
+        body{
             background-image: url(Images/bg1.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
+
         }
 
-        header.head {
+        header{
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
@@ -31,179 +27,204 @@
             border-bottom: ridge 10px rgb(30, 132, 255);
         }
 
-        img.logo {
+        header ul{
+            padding: 20px;
+            list-style-type: none;
+        }
+        header ul li{
+            display: inline-block;
             padding: 10px;
         }
-
-        .flex-title{
-            display: flex-box;
+        header ul li a{
+            background-color: white;
+            color: black;
+            padding: 14px 20px;
+            border-radius: 5px;
         }
-        .center-text{
-            display: flex;
-            align-items: center;
-            justify-content:right;
+        header ul li a:hover{
+            font-weight: bolder;
+            background-color: rgba(30, 143, 255, 0.466);
+            border-bottom: #002142 2px ridge;
+            border-right: #002142 2px ridge;
+            color: greenyellow;
         }
-        .title{
-            padding: 40px 0 0 0;
-            font-size: 30px;
-            color: white;
+        img.logo{
+            padding: 10px;
         }
-
-        h1 {
+        h1{
             color: greenyellow;
             font-family: 'Pattaya', Arial, Helvetica, sans-serif;
-            font-size: 350%;
+            font-size: 320%;
             position: absolute;
             left: 119px;
             top: 54px;
         }
-
-        header.head ul {
-            padding: 20px;
-            list-style-type: none;
-
-        }
-
-        header.head ul li {
-            display: inline-block;
-            padding: 10px;
-        }
-
-        header.head ul li a {
-            background-color: white;
-            color: black;
-            padding: 14px 20px;
-
-            border-radius: 5px;
-        }
-
-        header.head ul li a:hover {
-            font-weight: bolder;
-            background-color: rgba(30, 143, 255, 0.466);
-            border: #0b84fd 2px ridge;
-            color: greenyellow;
-        }
-
-        .slide-images {
-            display: none;
-            border-radius: 25px;
-        }
-
-        .content-area {
-            /* box-shadow: 10px 10px 5px grey; */
-            /* opacity: 0.89; */
-        }
-        .species{
-            position: absolute;
-            bottom: 22px;
-            right: 255px;
-            font-size: 40px;
-            font-weight: bold;
-            
-        }
-        .text-shadow{
-            color: whitesmoke;
-            text-shadow: 3px 3px 5px black;
-        }
-
-        .display-container {
-            position: relative;
+        .display-container{
             display: flex;
-            justify-content: right;
+            justify-content: left;
             align-items: center;
             height: 73vh;
-            padding: 0 30px 0 0;
+            /* margin-right: 30px; */   
+        }
+        .title{
+            padding: 40px 0 0 200px;
+            font-size: 22px;
+            color:white;
+        }
+        .images{
+            position: relative;
+            left: 80px;
+        }
+        .slide-images{
+            display: none;
         }
 
-        .display-left {
-            position: absolute;
-            top: 50%;
-            left: 60%;
-            transform: translate(0%, -50%);
-            -ms-transform: translate(-0%, -50%)
-        }
-
-        .display-right {
-            position: absolute;
-            top: 50%;
-            right: 6%;
-            transform: translate(0%, -50%);
-            -ms-transform: translate(0%, -50%)
-        }
-
-        .button {
+        .button{
             border: none;
-            background-color: rgba(255, 255, 255, 0.329);
+            background-color: rgba(128, 128, 128, 0.705);
             padding: 10px 5px;
             border-radius: 5px;
             color: rgba(0, 0, 0, 0.808);
+            }
+            .display-left{
+                position: absolute;
+                top: 550px;
+                left: 150px;
+                transform: translate(0%, -50%);
+                -ms-transform: translate(-0%, -50%);
+            }
+            .display-right{
+                position: absolute;
+                top: 550px;
+                left: 700px;
+                transform: translate(0%, -50%);
+                -ms-transform: translate(-0%, -50%);
+            }
+
+            .species{
+                position: absolute;
+                bottom: 72px;
+                left: 270px;
+                font-size: 40px;
+                font-weight: bold;
+            }
+
+            .text-shadow{
+                color: white;
+                text-shadow: 3px 3px 5px black;
+            }
+        /*.stage{
+            width:722px;
+            height:475;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            box-shadow: 0 0 0 inset, 0 0 5px grey;
+
+            transition: box-shadow 1s;
+            float: left;
+            margin: 10px;
         }
-        .foot{
-            background-color: #000;
+
+        .stage::after{
+            width: 80%;
+            height: 85%;
+            display: block;
+            white-space: pre;
+
             color: white;
+            border: 2px solid;
             text-align: center;
-            padding: 10px;
-            font-size: 18px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transition: opacity 1s .5s;
         }
+
+        .stage:hover{
+            box-shadow: 0 0 0 5px inset, 0 0 5px grey, 0 0 10px grey inset;
+            transition: box-shadow 1s;
+        }
+        .stage:hover::after{
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        #caterpillar{
+            background-image: url(Images/caterpillar.png);
+            color: rgba(71, 121, 94, 0.9);
+        }
+
+        #caterpillar::after{
+            content: "Caterpillar";
+        }*/
     </style>
 </head>
-
 <body>
-    <header class="head">
-        <img src="Images/header-butterfly.png" alt="logo" width="131px" height="112px" class="logo">
-        <h1>Metamorphosis of a Butterfly</h1>
-        <div class="navbar">
-            <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </div>
-    </header>
-    <!-- header ends -->
-    <!-- content area starts -->
-    <div class="flex-title">
-        <div class="title center-text text-shadow">
-            <p>Click on the image to know more about it. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-        </div>
+<header>
+    <img src="Images/header-butterfly.png" alt="Logo" width="121px" height="112px" class="logo">
+    <h1>Metamorphosis of a Butterfly</h1>
+    <div>
+        <ul>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
+        </ul>
     </div>
-    <div class="content-area content display-container">
-        <div class="slider">
-            <a href="#"><img class="slide-images" src="Images/caterpillar.png" width="800px"></a>
-            <a href="#"><img class="slide-images" src="Images/chrysalis1.png" width="800px"></a>
-            <a href="#"><img class="slide-images" src="Images/butterfly.png" width="800px"></a>
-
-            <button class="button display-left" onclick="plusDivs(-1)">&#10094;</button>
-            <button class="button display-right" onclick="plusDivs(+1)">&#10095;</button>
+</header>
+<!-- 
+<div class="wrapper">
+    <div id="caterpillar" class="stage"></div>
+    <div id="chrysalis" class="stage"></div>
+    <div id="butterfly" class="stage"></div>
+</div> -->
+<div class="title text-shadow">
+    <p>Click on the image to know more about it</p>
+    <p>Use the slider to check the other Stages</p>
+</div>
+    <div class="display-container">
+        <div class="images">
+            <a href="caterpillar.html"><div class="slide-images"><img src="Images/caterpillar.png" alt="Caterpillar" ><p>hello</p></div></a>
+            <a href="#"><img src="Images/chrysalis1.png" alt="Chrysalis" class="slide-images"></a>
+            <a href="#"><img src="Images/butterfly.png" alt="Butterfly" class="slide-images"></a> 
         </div>
+        
+        <button class="button display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="button display-right" onclick="plusDivs(+1)">&#10095;</button>
+
         <span class="species text-shadow">
             <i>Papilio</i> demoleus
-        </div>
+        </span>
     </div>
-    <!-- content-area ends -->
-    <!-- footer starts here -->
-    <footer class="foot">
-        &copy;Mohit's Butterfly Website
-    </footer>
-    <!-- footer ends here -->
-    <script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
+</div>
 
-        function plusDivs(n) {
-            showDivs(slideIndex += n);
-        }
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
 
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("slide-images");
-            if (n > x.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = x.length };
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex - 1].style.display = "block";
+    function plusDivs(n){
+        showDivs(slideIndex += n);
+    }
+
+    function showDivs(n){
+        var i;
+        var x = document.getElementsByClassName("slide-images");
+        if (n > x.length){
+            slideIndex = 1
         }
-    </script>
+        if(n < 1) {
+            slideIndex = x.length
+        };
+        for (i = 0; i < x.length; i++){
+            x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+    }
+</script>
+
 </body>
 
 </html>
