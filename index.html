@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metamorphosis of a Butterfly</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+
+        }
+
+        body {
+            /* background-color: #7f8c4c; */
+            background-image: url(images/bg1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        header.head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            background-color: rgba(30, 143, 255, 0.466);
+            border-bottom: ridge 10px rgb(30, 132, 255);
+        }
+
+        img.logo {
+            padding: 10px;
+        }
+
+        .flex-title{
+            display: flex-box;
+        }
+        .center-text{
+            display: flex;
+            align-items: center;
+            justify-content:right;
+        }
+        .title{
+            padding: 40px 0 0 0;
+            font-size: 30px;
+            color: white;
+        }
+
+        h1 {
+            color: greenyellow;
+            font-family: 'Pattaya', Arial, Helvetica, sans-serif;
+            font-size: 350%;
+            position: absolute;
+            left: 119px;
+            top: 54px;
+        }
+
+        header.head ul {
+            padding: 20px;
+            list-style-type: none;
+
+        }
+
+        header.head ul li {
+            display: inline-block;
+            padding: 10px;
+        }
+
+        header.head ul li a {
+            background-color: white;
+            color: black;
+            padding: 14px 20px;
+
+            border-radius: 5px;
+        }
+
+        header.head ul li a:hover {
+            font-weight: bolder;
+            background-color: rgba(30, 143, 255, 0.466);
+            border: #0b84fd 2px ridge;
+            color: greenyellow;
+        }
+
+        .slide-images {
+            display: none;
+            border-radius: 25px;
+        }
+
+        .content-area {
+            /* box-shadow: 10px 10px 5px grey; */
+            /* opacity: 0.89; */
+        }
+        .species{
+            position: absolute;
+            bottom: 22px;
+            right: 255px;
+            font-size: 40px;
+            font-weight: bold;
+            
+        }
+        .text-shadow{
+            color: whitesmoke;
+            text-shadow: 3px 3px 5px black;
+        }
+
+        .display-container {
+            position: relative;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            height: 73vh;
+            padding: 0 30px 0 0;
+        }
+
+        .display-left {
+            position: absolute;
+            top: 50%;
+            left: 60%;
+            transform: translate(0%, -50%);
+            -ms-transform: translate(-0%, -50%)
+        }
+
+        .display-right {
+            position: absolute;
+            top: 50%;
+            right: 6%;
+            transform: translate(0%, -50%);
+            -ms-transform: translate(0%, -50%)
+        }
+
+        .button {
+            border: none;
+            background-color: rgba(255, 255, 255, 0.329);
+            padding: 10px 5px;
+            border-radius: 5px;
+            color: rgba(0, 0, 0, 0.808);
+        }
+        .foot{
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="head">
+        <img src="images/header-butterfly.png" alt="logo" width="131px" height="112px" class="logo">
+        <h1>Metamorphosis of a Butterfly</h1>
+        <div class="navbar">
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- header ends -->
+    <!-- content area starts -->
+    <div class="flex-title">
+        <div class="title center-text text-shadow">
+            <p>Click on the image to know more about it. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        </div>
+    </div>
+    <div class="content-area content display-container">
+        <div class="slider">
+            <a href="#"><img class="slide-images" src="Images/caterpillar.png" width="800px"></a>
+            <a href="#"><img class="slide-images" src="Images/chrysalis1.png" width="800px"></a>
+            <a href="#"><img class="slide-images" src="Images/butterfly.png" width="800px"></a>
+
+            <button class="button display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="button display-right" onclick="plusDivs(+1)">&#10095;</button>
+        </div>
+        <span class="species text-shadow">
+            <i>Papilio</i> demoleus
+        </div>
+    </div>
+    <!-- content-area ends -->
+    <!-- footer starts here -->
+    <footer class="foot">
+        &copy;Mohit's Butterfly Website
+    </footer>
+    <!-- footer ends here -->
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("slide-images");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length };
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
