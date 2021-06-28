@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIAL</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <header>
+        <img src="Images/header-butterfly.png" alt="Logo" width="121px" height="112px" class="logo">
+        <h1>Metamorphosis of a Butterfly</h1>
+        <div>
+            <ul>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="title text-shadow center-text">
+            <p>Click on the image to know more about it</p>
+            <p>Use the slider to check the other Stages</p>
+        </div>
+        <div class="display-container">
+            <div class="left-right">
+                <button class="button display-left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="button display-right" onclick="plusDivs(+1)">&#10095;</button>
+            </div>
+            <div class="images">
+                <a href="caterpillar.html">
+                    <div class="slide-images"><img src="Images/caterpillar.png" width="500px" alt="Caterpillar">
+                        <p class="stage center-text text-shadow">Caterpillar<br><br><i>Papilio</i> demoleus</p>
+                    </div>
+                </a>
+                <a href="chrysalis.html">
+                    <div class="slide-images"><img src="Images/chrysalis1.png" width="500px" alt="Chrysalis">
+                        <p class="stage center-text text-shadow">Chrysalis<br><br><i>Papilio</i> demoleus</p>
+                    </div>
+                </a>
+                <a href="butterfly.html">
+                    <div class="slide-images"><img src="Images/butterfly.png" width="500px" alt="Butterfly">
+                        <p class="stage center-text text-shadow">Butterfly <br><br><i>Papilio</i> demoleus</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- footer starts here -->
+    <footer>
+        &copy;Mohit's Butterfly Website
+    </footer>
+    <!-- footer ends here -->
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("slide-images");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            };
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
