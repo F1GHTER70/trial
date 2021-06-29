@@ -1,0 +1,53 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+body {
+    background-color: rgba(41, 211, 41, 0.589);
+}
+
+h2 {
+    font-family: 'Pattaya', Arial, Helvetica, sans-serif;
+    font-size: 200%;
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    width: 100%;
+    border-radius: 5px;
+}
+
+p {
+    padding: 10px;
+    font-size: 110%;
+}
+
+hr {
+    color: green;
+    height: 2px;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 1000px;
+    background-color: rgba(41, 211, 41, 0.589);
+    ;
+}
+
+.def-img {
+    padding: 0 30vw;
+}
+
+.h-p {
+    font-size: 100%;
+    padding: 0;
+}
+.info-p{
+    min-width: 40vw;;
+}
