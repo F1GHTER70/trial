@@ -26,13 +26,14 @@ header a:hover {
     color: greenyellow;
 }
 .brand{
-    width: 738px;
+    width: 60vw;
     overflow: auto;
 }
 .nav-tags{
     display: flex;
     justify-content: right;
     align-items: center;
+    margin: auto 0;
 }
 /* h1 {
     color: greenyellow;
