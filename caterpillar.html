@@ -6,37 +6,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caterpillar</title>
+    <link rel="stylesheet" href="header-footer.css">
     <style>
         * {
             padding: 0;
             margin: 0;
+            text-decoration: none;
+        }
+        body{
+            background-color: rgba(41, 211, 41, 0.589);
         }
         h2{
+            font-family: 'Pattaya', Arial, Helvetica, sans-serif;
+            font-size: 200%;
             text-align: center;
+            padding: 10px;
+            background-color: white;
+            width: 100%;
+            border-radius: 5px;
+        }
+        p{
+            padding: 10px;
+            font-size: 110%;
         }
         hr{
             color: green;
             height: 2px;
         }
         .container{
+            margin: 0 auto;
             display: flex;
             flex-direction: column;  
-            /* justify-content: center;   */
-            /* align-items: center;        */
+            justify-content: center;  
+            align-items: center;       
             text-align: center;
+            max-width: 1000px;
+            background-color: rgba(41, 211, 41, 0.589);;
         }
         
         .def-img{
             padding: 0 30vw;
+        }
+        .h-p{
+            font-size: 100%;
+            padding: 0;
         }
         
     </style>
 </head>
 
 <body>
-    <h2>Caterpillar Phase of the Butterfly</h2>
+    <header>
+        <div class="brand">
+
+            <img src="Images/logo.png" alt="Logo" width="100%" height="100%" class="logo">
+            <!-- <h1>Metamorphosis of a Butterfly</h1> -->
+        </div>
+        <div class="nav-tags">
+            <a href="index.html"><p class="h-p">Home</p></a>
+            <a href="aboutUs.html"><p class="h-p">About</p></a>
+            <a href="contactUs.html"><p class="h-p">Contacts</p></a>
+        </div>
+    </header>
     <div class="container">
-        <hr>
+        <h2>Caterpillar Phase of the Butterfly</h2>
         <div class="def-img">
             <p> The egg takes about 2.5-3 days to hatch. The young caterpillar eats its way out of the mature egg, and
                 then
@@ -147,6 +180,9 @@
             <img src="Images/caterpillar/ca8.jpg" alt="" class="right">
         </div>
     </div>
+    <footer>
+        &copy;Mohit's Butterfly Website
+    </footer>
 </body>
 
 </html>
